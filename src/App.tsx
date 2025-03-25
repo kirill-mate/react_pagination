@@ -37,9 +37,9 @@ export const App: React.FC = () => {
             data-cy="perPageSelector"
             id="perPageSelector"
             className="form-control"
-            defaultValue={ItemsPerPage.items5}
+            defaultValue={ItemsPerPage.items5.toString()}
             onChange={ev => {
-              const selectedValue = +ev.target.value;
+              const selectedValue: ItemsPerPage = +ev.target.value;
 
               setPerPage(selectedValue);
               setCurrentPage(1);
